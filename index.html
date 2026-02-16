@@ -460,9 +460,6 @@
         .project-card:nth-child(4) { animation-delay: 0.4s; }
         .project-card:nth-child(5) { animation-delay: 0.5s; }
         .project-card:nth-child(6) { animation-delay: 0.6s; }
-        .project-card:nth-child(7) { animation-delay: 0.7s; }
-        .project-card:nth-child(8) { animation-delay: 0.8s; }
-        .project-card:nth-child(9) { animation-delay: 0.9s; }
 
         .project-card::before {
             content: '';
@@ -653,138 +650,6 @@
 
         /* Contact Section */
         .contact-grid {
-
-        /* Blog Section */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .blog-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.4s;
-            animation: fadeInUp 0.8s ease-out;
-            animation-fill-mode: both;
-            cursor: pointer;
-        }
-
-        .blog-card:nth-child(1) { animation-delay: 0.1s; }
-        .blog-card:nth-child(2) { animation-delay: 0.2s; }
-        .blog-card:nth-child(3) { animation-delay: 0.3s; }
-        .blog-card:nth-child(4) { animation-delay: 0.4s; }
-        .blog-card:nth-child(5) { animation-delay: 0.5s; }
-        .blog-card:nth-child(6) { animation-delay: 0.6s; }
-
-        .blog-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 30px 80px rgba(0, 255, 255, 0.3);
-        }
-
-        .blog-image {
-            height: 200px;
-            background: linear-gradient(135deg, 
-                rgba(0, 255, 255, 0.2), 
-                rgba(255, 0, 255, 0.2),
-                rgba(0, 255, 136, 0.2));
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .blog-image::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(0, 255, 255, 0.03) 10px,
-                rgba(0, 255, 255, 0.03) 20px
-            );
-        }
-
-        .blog-category {
-            background: rgba(0, 255, 255, 0.2);
-            border: 1px solid var(--primary);
-            padding: 0.5rem 1.5rem;
-            border-radius: 30px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--primary);
-            backdrop-filter: blur(10px);
-            position: relative;
-            z-index: 1;
-        }
-
-        .blog-content {
-            padding: 2rem;
-        }
-
-        .blog-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-
-        .blog-date {
-            color: var(--accent);
-        }
-
-        .blog-read-time {
-            color: var(--text-secondary);
-        }
-
-        .blog-content h3 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-            line-height: 1.4;
-        }
-
-        .blog-content p {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .blog-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .blog-tag {
-            background: rgba(0, 255, 136, 0.1);
-            border: 1px solid rgba(0, 255, 136, 0.3);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.75rem;
-            color: var(--accent);
-            transition: all 0.3s;
-        }
-
-        .blog-tag:hover {
-            background: rgba(0, 255, 136, 0.2);
-            border-color: var(--accent);
-        }
-
-        /* Contact Section */
-        .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
@@ -897,10 +762,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-
             .contact-grid {
                 grid-template-columns: 1fr;
             }
@@ -954,13 +815,12 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo">PARVE.AI</div>
+            <div class="logo">papalial.ai</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -1216,91 +1076,7 @@
                 <!-- Project 6 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>NeuralCodeX: LLM for Code</h3>
-                        <p class="project-date">Jan 2025 – Present</p>
-                    </div>
-                    <div class="project-content">
-                        <p>Fine-tuned LLaMA 3.1 (8B) on 150GB code dataset using QLoRA. Built RL fine-tuning with PPO and execution-based feedback. Deployed with vLLM for 500+ req/sec throughput.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">LLaMA 3.1</span>
-                            <span class="tech-badge">vLLM</span>
-                            <span class="tech-badge">DeepSpeed</span>
-                            <span class="tech-badge">PPO</span>
-                            <span class="tech-badge">FastAPI</span>
-                        </div>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <span class="stat-value">78.3%</span>
-                                <span class="stat-label">HumanEval</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-value">500+</span>
-                                <span class="stat-label">Req/sec</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 7 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>VisionLM: Multimodal Foundation</h3>
-                        <p class="project-date">Nov 2024 – Dec 2024</p>
-                    </div>
-                    <div class="project-content">
-                        <p>Architected multimodal transformer with ViT encoder and GPT decoder. Trained on 50M image-caption pairs using contrastive learning. Achieved 76.8% on VQA benchmark.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">ViT</span>
-                            <span class="tech-badge">CLIP</span>
-                            <span class="tech-badge">FlashAttention</span>
-                            <span class="tech-badge">Ray</span>
-                            <span class="tech-badge">MLflow</span>
-                        </div>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <span class="stat-value">76.8%</span>
-                                <span class="stat-label">VQA Accuracy</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-value">2.5K+</span>
-                                <span class="stat-label">Downloads</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 8 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>MedicalLLM: Clinical NLP</h3>
-                        <p class="project-date">Jul 2024 – Aug 2024</p>
-                    </div>
-                    <div class="project-content">
-                        <p>Fine-tuned BioGPT and PubMedBERT on 2M+ clinical notes. Implemented RAG with PubMed achieving 91% on MedQA. Built HIPAA-compliant system with differential privacy.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">BioGPT</span>
-                            <span class="tech-badge">PubMedBERT</span>
-                            <span class="tech-badge">RAG</span>
-                            <span class="tech-badge">DP-SGD</span>
-                            <span class="tech-badge">FAISS</span>
-                        </div>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <span class="stat-value">91%</span>
-                                <span class="stat-label">MedQA</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-value">HIPAA</span>
-                                <span class="stat-label">Compliant</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 9 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Suraksha - Emergency Response</h3>
+                        <h3>GestureBased Emergency Response</h3>
                         <p class="project-date">2024</p>
                     </div>
                     <div class="project-content">
@@ -1375,135 +1151,6 @@
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog">
-        <div class="container">
-            <div class="section-header">
-                <h2>AI Insights</h2>
-                <p>Thoughts on machine learning, deep learning, and the future of AI</p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--accent);">
-                    📝 Blog posts coming soon - Stay tuned for deep dives into cutting-edge AI research!
-                </p>
-            </div>
-            <div class="blog-grid">
-                <!-- Blog posts will be added here -->
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <div class="blog-category">LLMs</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">Coming Soon</span>
-                            <span class="blog-read-time">5 min read</span>
-                        </div>
-                        <h3>Fine-tuning Large Language Models: A Practical Guide</h3>
-                        <p>Exploring efficient fine-tuning techniques like LoRA and QLoRA for domain adaptation of LLMs with limited computational resources.</p>
-                        <div class="blog-tags">
-                            <span class="blog-tag">LLMs</span>
-                            <span class="blog-tag">Fine-tuning</span>
-                            <span class="blog-tag">LoRA</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <div class="blog-category">Computer Vision</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">Coming Soon</span>
-                            <span class="blog-read-time">7 min read</span>
-                        </div>
-                        <h3>Multimodal AI: Bridging Vision and Language</h3>
-                        <p>Deep dive into Vision Transformers and how they're revolutionizing multimodal learning through cross-attention mechanisms.</p>
-                        <div class="blog-tags">
-                            <span class="blog-tag">ViT</span>
-                            <span class="blog-tag">Multimodal</span>
-                            <span class="blog-tag">CLIP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <div class="blog-category">RAG</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">Coming Soon</span>
-                            <span class="blog-read-time">6 min read</span>
-                        </div>
-                        <h3>Building Production-Ready RAG Systems</h3>
-                        <p>Best practices for implementing Retrieval-Augmented Generation with vector databases, chunking strategies, and evaluation metrics.</p>
-                        <div class="blog-tags">
-                            <span class="blog-tag">RAG</span>
-                            <span class="blog-tag">FAISS</span>
-                            <span class="blog-tag">LangChain</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <div class="blog-category">MLOps</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">Coming Soon</span>
-                            <span class="blog-read-time">8 min read</span>
-                        </div>
-                        <h3>Optimizing LLM Inference: From Latency to Throughput</h3>
-                        <p>Techniques for deploying high-performance LLMs including quantization, KV-cache optimization, and continuous batching with vLLM.</p>
-                        <div class="blog-tags">
-                            <span class="blog-tag">Optimization</span>
-                            <span class="blog-tag">vLLM</span>
-                            <span class="blog-tag">Inference</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <div class="blog-category">Privacy</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">Coming Soon</span>
-                            <span class="blog-read-time">10 min read</span>
-                        </div>
-                        <h3>Privacy-Preserving Machine Learning in Healthcare</h3>
-                        <p>Implementing differential privacy and federated learning for training medical AI models while maintaining HIPAA compliance.</p>
-                        <div class="blog-tags">
-                            <span class="blog-tag">Privacy</span>
-                            <span class="blog-tag">Healthcare</span>
-                            <span class="blog-tag">DP-SGD</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <div class="blog-category">Deep Learning</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">Coming Soon</span>
-                            <span class="blog-read-time">9 min read</span>
-                        </div>
-                        <h3>Attention Mechanisms: From Self-Attention to FlashAttention</h3>
-                        <p>Understanding the evolution of attention mechanisms and how FlashAttention achieves 3x speedup through IO-aware algorithm design.</p>
-                        <div class="blog-tags">
-                            <span class="blog-tag">Transformers</span>
-                            <span class="blog-tag">Attention</span>
-                            <span class="blog-tag">Optimization</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -1516,11 +1163,11 @@
                     <h3>Get In Touch</h3>
                     <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
                     <div class="contact-links">
-                        <a href="/cdn-cgi/l/email-protection#b2c2d3c0c4d79cc2d3dedbd3def2d5dfd3dbde9cd1dddf" class="contact-link">
+                        <a href="mailto:parve.palial@gmail.com" class="contact-link">
                             <span class="contact-link-icon">✉</span>
                             <div>
                                 <div style="font-weight: 500;">Email</div>
-                                <div style="font-size: 0.9rem; color: var(--text-secondary);"><span class="__cf_email__" data-cfemail="2959485b5f4c07594845404845694e44484045074a4644">[email&#160;protected]</span></div>
+                                <div style="font-size: 0.9rem; color: var(--text-secondary);">parve.palial@gmail.com</div>
                             </div>
                         </a>
                         <a href="https://linkedin.com/in/parvepalial" target="_blank" class="contact-link">
@@ -1561,7 +1208,7 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Neural Network Background Animation
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
@@ -1739,4 +1386,21 @@
                         nodesCtx.strokeStyle = gradient;
                         nodesCtx.lineWidth = 2;
                         nodesCtx.moveTo(nodes[i].x, nodes[i].y);
-                        node
+                        nodesCtx.lineTo(nodes[j].x, nodes[j].y);
+                        nodesCtx.stroke();
+                    }
+                }
+            }
+
+            requestAnimationFrame(animateNodes);
+        }
+
+        animateNodes();
+    </script>
+</body>
+</html>
+
+
+
+
+
